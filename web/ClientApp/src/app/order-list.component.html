@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="card-header bg-primary text-light">
+       Order List
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <tr>
+            
+                <th>Order Code</th>
+                <th>Table no</th>
+                <th>Devilary Time</th>
+                <th>Menu Id</th>
+               
+           
+            </tr>
+            <tr *ngFor = "let e of order" >
+       
+                <td>{{e.orderNo}}</td>
+                <td>{{e.tableNo}}</td>
+                <td>{{e.DlTime}}</td>
+                <td>{{e.menuId}}</td>
+               
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

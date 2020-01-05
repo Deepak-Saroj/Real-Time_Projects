@@ -1,0 +1,23 @@
+<form>
+    <div class="card">
+        <div class="card-header bg-primary text-light">
+            Dining Insert Form  
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label>Id</label>
+                <input type="text" class="form-control" name="dId" [(ngModel)]="dining.dId">
+            </div>
+            <div class="form-group">
+                <label>Members</label>
+                <input type="text" class="form-control" name="capacity" [(ngModel)]="dining.capacity">
+            </div> 
+            
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-success">Save</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger">Cancel</button>
+        </div>
+    </div>
+</form>

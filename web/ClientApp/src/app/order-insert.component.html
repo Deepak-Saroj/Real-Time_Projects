@@ -1,0 +1,32 @@
+<form>
+    <div class="card">
+        <div class="card-header bg-primary text-light">
+            Order Insert Form  
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label>Id</label>
+                <input type="text" class="form-control" name="orderNo" [(ngModel)]="employee.orderNo">
+            </div>
+            <div class="form-group">
+                <label>Table no</label>
+                <input type="text" class="form-control" name="tableNo" [(ngModel)]="employee.tableNo">
+            </div> 
+            <div class="form-group">
+                <label>Devilary Time</label>
+                <input type="text" class="form-control" name="DlTime" [(ngModel)]="employee.DlTime">
+            </div> 
+            <div class="form-group">
+                <label>MenuId</label>
+                <input type="text" class="form-control" name="menuId" [(ngModel)]="employee.menuId">
+            </div> 
+             
+            
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-success">Save</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger">Cancel</button>
+        </div>
+    </div>
+</form>

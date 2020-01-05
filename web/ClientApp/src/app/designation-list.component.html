@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header bg-primary text-light">
+        Designation List
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <tr>
+            
+                <th>Designations Code</th>
+                <th>Designations Name</th>
+            </tr>
+            <tr *ngFor = "let d of designation" >
+       
+                <td>{{d.desigId}}</td>
+                <td>{{d.desigName}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-header bg-primary text-light">
+        Location List
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <tr>
+            
+                <th>Locations Code</th>
+                <th>Locations Name</th>
+                <th>City Code</th>
+            </tr>
+            <tr *ngFor = "let l of Location" >
+       
+                <td>{{l.locid}}</td>
+                <td>{{l.locname}}</td>
+                <td>{{l.cid}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

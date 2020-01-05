@@ -1,0 +1,12 @@
+<table class="table table-hover">
+        <tr>
+            <th>Id</th>
+            <th>Short Code</th>
+            <th>State Name</th>
+        </tr>
+        <tr *ngFor = "let s of states" >
+            <td>{{s.id}}</td>
+            <td>{{s.stId}}</td>
+            <td>{{s.stName}}</td>
+        </tr>
+    </table>

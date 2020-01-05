@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-header bg-primary text-light">
+        Permission List
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <tr>
+            
+                <th>permission Code</th>
+                <th>Name</th>
+                <th>Description</th>
+               
+           
+            </tr>
+            <tr *ngFor = "let e of permission" >
+       
+                <td>{{e.permissionid}}</td>
+                <td>{{e.permissionName}}</td>
+                <td>{{e.permissiondiscription}}</td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-header bg-primary text-light">
+        Dining List
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <tr>
+            
+                <th>Dining Code</th>
+                <th>Dining Name</th>
+           
+            </tr>
+            <tr *ngFor = "let d of dining" >
+       
+                <td>{{d.dId}}</td>
+                <td>{{d.capacity}}</td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

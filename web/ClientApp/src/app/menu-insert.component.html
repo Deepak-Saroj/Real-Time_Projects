@@ -1,0 +1,32 @@
+<form>
+    <div class="card">
+        <div class="card-header bg-primary text-light">
+            Employee Insert Form  
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label>Id</label>
+                <input type="text" class="form-control" name="manuId" [(ngModel)]="employee.manuId">
+            </div>
+            <div class="form-group">
+                <label>Items</label>
+                <input type="text" class="form-control" name="items" [(ngModel)]="employee.items">
+            </div> 
+            <div class="form-group">
+                <label>FullPrice</label>
+                <input type="text" class="form-control" name="fullPrice" [(ngModel)]="employee.fullPrice">
+            </div> 
+            <div class="form-group">
+                <label>HalfPrice</label>
+                <input type="text" class="form-control" name="halfPrice" [(ngModel)]="employee.halfPrice">
+            </div> 
+          
+            
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-success">Save</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger">Cancel</button>
+        </div>
+    </div>
+</form>

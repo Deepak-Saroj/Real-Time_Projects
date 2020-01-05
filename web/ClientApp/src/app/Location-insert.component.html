@@ -1,0 +1,26 @@
+<form>
+    <div class="card">
+        <div class="card-header bg-primary text-light">
+            Location Insert Form  
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label>Id</label>
+                <input type="text" class="form-control" name="locid" [(ngModel)]="location.locid">
+            </div>
+            <div class="form-group">
+                <label>Location Name</label>
+                <input type="text" class="form-control" name="locname" [(ngModel)]="location.locname">
+            </div> 
+             <div class="form-group">
+                <label>City Code</label>
+                <input type="text" class="form-control" name="cid" [(ngModel)]="location.cid">
+            </div> 
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-success">Save</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger">Cancel</button>
+        </div>
+    </div>
+</form>

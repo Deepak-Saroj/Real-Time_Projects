@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-header bg-primary text-light">
+        Employee List
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <tr>
+            
+                <th>Employee Code</th>
+                <th>Employee Salary</th>
+                <th>Employee Email</th>
+                <th>Employee Name</th>
+                <th>Employee PhoneNo</th>
+                <th>Desigination code</th>
+                <th>Restaurent Code</th>
+           
+            </tr>
+            <tr *ngFor = "let e of employee" >
+       
+                <td>{{e.eId}}</td>
+                <td>{{e.salary}}</td>
+                <td>{{e.email}}</td>
+                <td>{{e.eName}}</td>
+                <td>{{e.phno}}</td>
+                <td>{{e.desigID}}</td>
+                <td>{{e.rId}}</td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

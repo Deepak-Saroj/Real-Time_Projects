@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-header bg-primary text-light">
+       Shift List
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <tr>
+            
+                <th>order Code</th>
+                <th>Sift Type</th>
+                <th>Date</th>
+               
+           
+            </tr>
+            <tr *ngFor = "let e of shift" >
+       
+                <td>{{e.eId}}</td>
+                <td>{{e.sType}}</td>
+                <td>{{e.date}}</td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

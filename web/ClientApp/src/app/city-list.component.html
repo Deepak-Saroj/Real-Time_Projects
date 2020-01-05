@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-header bg-primary text-light">
+        City List
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <tr>
+                <th>Id</th>
+                <th>City Code</th>
+                <th>City Name</th>
+                <th>State Code</th>
+            </tr>
+            <tr *ngFor = "let c of city" >
+                <td>{{c.id}}</td>
+                <td>{{c.cId}}</td>
+                <td>{{c.cName}}</td>
+                <td>{{c.stId}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

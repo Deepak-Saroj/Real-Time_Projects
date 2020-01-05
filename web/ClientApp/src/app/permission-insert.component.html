@@ -1,0 +1,28 @@
+<form>
+    <div class="card">
+        <div class="card-header bg-primary text-light">
+            Permission Insert Form  
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label>Permission Id</label>
+                <input type="text" class="form-control" name="permissionid" [(ngModel)]="permission.permissionid">
+            </div>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" name="permissionName" [(ngModel)]="permission.permissionName">
+            </div> 
+            <div class="form-group">
+                <label>Description</label>
+                <input type="text" class="form-control" name="permissiondiscription" [(ngModel)]="permission.permissiondiscription">
+            </div> 
+          
+            
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-success">Save</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger">Cancel</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-header bg-primary text-light">
+        Role List
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <tr>
+            
+                <th>role Code</th>
+                <th>Name</th>
+                <th>Description</th>
+               
+           
+            </tr>
+            <tr *ngFor = "let e of role" >
+       
+                <td>{{e.roleid}}</td>
+                <td>{{e.roleName}}</td>
+                <td>{{e.roleDis}}</td>
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

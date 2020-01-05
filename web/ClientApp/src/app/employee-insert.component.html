@@ -1,0 +1,43 @@
+<form>
+    <div class="card">
+        <div class="card-header bg-primary text-light">
+            Employee Insert Form  
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label>Id</label>
+                <input type="text" class="form-control" name="eId" [(ngModel)]="employee.eId">
+            </div>
+            <div class="form-group">
+                <label>Salary</label>
+                <input type="text" class="form-control" name="salary" [(ngModel)]="employee.salary">
+            </div> 
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" name="email" [(ngModel)]="employee.email">
+            </div> 
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" name="eName" [(ngModel)]="employee.eName">
+            </div> 
+              <div class="form-group">
+                <label>Phone No</label>
+                <input type="text" class="form-control" name="phno" [(ngModel)]="employee.phno">
+            </div> 
+              <div class="form-group">
+                <label>Desigination code</label>
+                <input type="text" class="form-control" name="desigID" [(ngModel)]="employee.desigID">
+            </div> 
+              <div class="form-group">
+                <label>Restaurent Code</label>
+                <input type="text" class="form-control" name="rId" [(ngModel)]="employee.rId">
+            </div> 
+            
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-success">Save</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger">Cancel</button>
+        </div>
+    </div>
+</form>
