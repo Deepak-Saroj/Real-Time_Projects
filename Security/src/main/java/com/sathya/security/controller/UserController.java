@@ -42,5 +42,9 @@ public class UserController {
 	{
 		 userService.deleteDataById(id);
 	}
-
+	@PostMapping(path="/login")
+	public Users login(@RequestBody Users user)
+	{
+		return userService.login(user.getUsername(), user.getPassword());
+	}
 }

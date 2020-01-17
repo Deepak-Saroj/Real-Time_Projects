@@ -7,5 +7,6 @@ public interface UserService {
 	public Users addData(Users user);
 	public Users updateData(Users user);
 	public void deleteDataById(Integer id);
+	Users login(String user,String pass);
 
 }

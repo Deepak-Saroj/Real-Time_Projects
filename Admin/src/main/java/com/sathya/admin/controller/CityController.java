@@ -56,7 +56,7 @@ public class CityController {
 	  }
 	  
 	  @DeleteMapping(path="/DeleteCity/{id}") 
-	  public void DeleteCity(@PathVariable("id") Integer id)
+	  public void DeleteCity(@PathVariable("id") String id)
 	  {
 		  cityService.DeleteCity(id);
 	  }

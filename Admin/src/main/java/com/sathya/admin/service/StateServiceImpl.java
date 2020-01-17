@@ -32,9 +32,9 @@ public State updateRecord(State state) {
 	return stateRepository.save(state);
 }
 @Transactional
-public void DeleteRecord(Integer id) {
+public void DeleteRecord(String  id) {
 	// TODO Auto-generated method stub
-	stateRepository.deleteById(id);
+	stateRepository.deleteByStid(id);
 }
 @Override
 public Optional<State> findByStId(String stid) {

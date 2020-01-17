@@ -8,5 +8,6 @@ import com.sathya.admin.entity.State;
 
 public interface StateRepository extends CrudRepository<State,Integer> {
 	Optional<State> findBystId(String stid);
+	void deleteByStid(String stid);
 	
 }

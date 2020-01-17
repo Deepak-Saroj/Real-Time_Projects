@@ -1,5 +1,7 @@
 package com.sathya.security.service;
 
+import java.util.Optional;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,5 +38,14 @@ public class UserServceImpl implements UserService {
 		userRepository.deleteById(id);
 
 	}
+
+	
+	public Users login(String user, String pass) {
+		// TODO Auto-generated method stub
+		Optional<Users> op=userRepository.findByUsernameAndPassword(user, pass);
+		return op.get();
+	}
+
+	
 
 }

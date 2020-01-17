@@ -69,7 +69,7 @@ public class StateController {
 	  }
 	  
 	  @DeleteMapping(path="/DeleteState/{id}") 
-	  public void DeleteState(@PathVariable("id") Integer id)
+	  public void DeleteState(@PathVariable("id") String id)
 	  {
 		  stateService.DeleteRecord(id);
 	  }

@@ -30,9 +30,9 @@ public City updateCity(City City) {
 	return cityRepository.save(City);
 }
 @Transactional
-public void DeleteCity(Integer id) {
+public void DeleteCity(String id) {
 	// TODO Auto-generated method stub
-	cityRepository.deleteById(id);
+	cityRepository.deleteByCid(id);
 }
 
 

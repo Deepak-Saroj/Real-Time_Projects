@@ -11,6 +11,6 @@ public interface StateService {
 	public Iterable<State> SelectData();
 	public State insertState(State state);
 	public State updateRecord(State state);
-	public void DeleteRecord(Integer id);
+	public void DeleteRecord(String id);
 	Optional<State> findByStId(String stid);
 }

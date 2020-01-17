@@ -7,5 +7,5 @@ public interface CityService {
 	public Iterable<City> SelectAllCity();
 	public City insertCity(City city);
 	public City updateCity(City city);
-	public void DeleteCity(Integer id);
+	public void DeleteCity(String id);
 }
