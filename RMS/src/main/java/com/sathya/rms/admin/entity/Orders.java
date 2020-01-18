@@ -8,8 +8,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+
 
 @Entity
 @Table(name="ORDERS")
@@ -19,62 +22,92 @@ public class Orders implements Serializable{
 	@Column(name = "ID")
 	private int id;
 	
-	@Column(name = "ORDERNO")
-	private String orderNo;
+	@Column(name = "OID")
+	private String oid;
 	
-	@Column(name = "TABLENO",nullable=false)
-	private Date tableNo;
+	@Column(name = "INO")
+	private String ino;
+
+	@Column(name = "QTY")
+	private String qty;
+
+	@Column(name = "AMT")
+	private String amt;
+
+	@Column(name = "OMID")
+	private String omid;
 	
-	@Column(name = "DILIVARYTIME",nullable=false)
-	private Date DlTime;
-	@Transient
-	private int menuId;
+	 @ManyToOne
+	  @JoinColumn(name="OM_ID")
+	  private Order_Master om;
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getOrderNo() {
-		return orderNo;
+
+	public String getOid() {
+		return oid;
 	}
-	public void setOrderNo(String orderNo) {
-		this.orderNo = orderNo;
+
+	public void setOid(String oid) {
+		this.oid = oid;
 	}
-	public Date getTableNo() {
-		return tableNo;
+
+	public String getIno() {
+		return ino;
 	}
-	public void setTableNo(Date tableNo) {
-		this.tableNo = tableNo;
+
+	public void setIno(String ino) {
+		this.ino = ino;
 	}
-	public Date getDlTime() {
-		return DlTime;
+
+	public String getQty() {
+		return qty;
 	}
-	public void setDlTime(Date dlTime) {
-		DlTime = dlTime;
+
+	public void setQty(String qty) {
+		this.qty = qty;
 	}
-	public int getMenuId() {
-		return menuId;
+
+	public String getAmt() {
+		return amt;
 	}
-	public void setMenuId(int menuId) {
-		this.menuId = menuId;
+
+	public void setAmt(String amt) {
+		this.amt = amt;
 	}
+
+	public String getOmid() {
+		return omid;
+	}
+
+	public void setOmid(String omid) {
+		this.omid = omid;
+	}
+
 	@Override
 	public String toString() {
-		return "Orders [id=" + id + ", orderNo=" + orderNo + ", tableNo=" + tableNo + ", DlTime=" + DlTime + ", menuId="
-				+ menuId + "]";
+		return "Orders [id=" + id + ", oid=" + oid + ", ino=" + ino + ", qty=" + qty + ", amt=" + amt + ", omid=" + omid
+				+ "]";
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((DlTime == null) ? 0 : DlTime.hashCode());
+		result = prime * result + ((amt == null) ? 0 : amt.hashCode());
 		result = prime * result + id;
-		result = prime * result + menuId;
-		result = prime * result + ((orderNo == null) ? 0 : orderNo.hashCode());
-		result = prime * result + ((tableNo == null) ? 0 : tableNo.hashCode());
+		result = prime * result + ((ino == null) ? 0 : ino.hashCode());
+		result = prime * result + ((oid == null) ? 0 : oid.hashCode());
+		result = prime * result + ((omid == null) ? 0 : omid.hashCode());
+		result = prime * result + ((qty == null) ? 0 : qty.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -84,28 +117,35 @@ public class Orders implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		Orders other = (Orders) obj;
-		if (DlTime == null) {
-			if (other.DlTime != null)
+		if (amt == null) {
+			if (other.amt != null)
 				return false;
-		} else if (!DlTime.equals(other.DlTime))
+		} else if (!amt.equals(other.amt))
 			return false;
 		if (id != other.id)
 			return false;
-		if (menuId != other.menuId)
-			return false;
-		if (orderNo == null) {
-			if (other.orderNo != null)
+		if (ino == null) {
+			if (other.ino != null)
 				return false;
-		} else if (!orderNo.equals(other.orderNo))
+		} else if (!ino.equals(other.ino))
 			return false;
-		if (tableNo == null) {
-			if (other.tableNo != null)
+		if (oid == null) {
+			if (other.oid != null)
 				return false;
-		} else if (!tableNo.equals(other.tableNo))
+		} else if (!oid.equals(other.oid))
+			return false;
+		if (omid == null) {
+			if (other.omid != null)
+				return false;
+		} else if (!omid.equals(other.omid))
+			return false;
+		if (qty == null) {
+			if (other.qty != null)
+				return false;
+		} else if (!qty.equals(other.qty))
 			return false;
 		return true;
 	}
 	
 	
-
 }

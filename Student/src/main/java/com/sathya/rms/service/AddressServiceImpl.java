@@ -1,6 +1,5 @@
 package com.sathya.rms.service;
 
-import java.util.List;
 
 import javax.transaction.Transactional;
 
@@ -15,9 +14,9 @@ public class AddressServiceImpl implements AddressService {
 	AddressRepository adderrepo;
 
 	@Transactional
-	public void saveData(List<Address> address) {
+	public void saveData(Address address) {
 		// TODO Auto-generated method stub
-		  adderrepo.saveAll(address);
+		  adderrepo.save(address);
 	}
 
 	

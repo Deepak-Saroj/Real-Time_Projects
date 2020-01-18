@@ -11,13 +11,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Address {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO/*SEQUENCE, generator="Adder_seq")
-	@SequenceGenerator(
-			name="Adder_seq",
-			sequenceName = "course_sequence"
-											 * , allocationSize=00
-											 */
-		)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name ="ID")
 	private int id;
 
@@ -27,12 +21,9 @@ public class Address {
 	@Column(name = "COUNTRY", nullable = false)
 	private String country;
 
-	/*
-	 * @Column(name ="ADD_ID",unique = true,nullable = false) private int add_id;
-	 */
 
 	@ManyToOne
-	@JoinColumn(name = "ST_ID")
+	@JoinColumn(name="STID")
 	private Student student;
 
 	public int getId() {

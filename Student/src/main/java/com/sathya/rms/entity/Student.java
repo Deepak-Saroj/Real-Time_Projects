@@ -2,6 +2,7 @@ package com.sathya.rms.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,30 +10,32 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name="Student1")
 public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name ="ST_ID")
+	@Column(name ="ID")
 	private int id;
+	@Column(name ="STID")
+	private int stid;
 	@Column(name ="NAME", nullable = false)
 	private String name;
 	
+	@Transient
+	private Address address;
 
-	/*
-	 * @Column(name ="ADD_ID", unique=true, nullable = false) private int add_id;
-	 */
-	@OneToMany(mappedBy="student")
-	List<Address> address;
+	@OneToMany(mappedBy="student" ,cascade = CascadeType.ALL)
+	List<Address> address1;
 	
 	
-	public List<Address> getAddress() {
+	public Address getAddress() {
 		return address;
 	}
 
-	public void setAddress(List<Address> address) {
+	public void setAddress(Address address) {
 		this.address = address;
 	}
 
