@@ -1,3 +1,4 @@
+
 package com.sathya.admin.entity;
 
 import javax.persistence.Column;
@@ -8,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name="CITY")
@@ -23,7 +25,7 @@ public class City {
 	@Column(name = "cName", nullable=false)
 	private String cName;
 	
-	@Column(name = "STID", unique = true, nullable=false)
+	@Transient
 	private String stId;
 	
 	
